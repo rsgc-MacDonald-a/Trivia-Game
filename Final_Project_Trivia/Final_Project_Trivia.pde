@@ -34,13 +34,15 @@ void setup() {
 void draw() {
   background(200, 255, 100);
   fill(0, 0, 200);
+  rectMode(CORNER);
   rect(40, 110, 1200, -50);
-  ellipse(x1, y1, 250, 250);//top left
-  ellipse(x2, y2, 250, 250);//bottom left
-  ellipse(x3, y3, 250, 250);//top right
-  ellipse(x4, y4, 250, 250);//bottom right
-  ellipse(x5, y5, 250, 250);//top middle
-  ellipse(x6, y6, 250, 250);//bottom middle
+  rectMode(CENTER);
+  rect(x1, y1, 250, 250);//top left
+  rect(x2, y2, 250, 250);//bottom left
+  rect(x3, y3, 250, 250);//top right
+  rect(x4, y4, 250, 250);//bottom right
+  rect(x5, y5, 250, 250);//top middle
+  rect(x6, y6, 250, 250);//bottom middle
   //draw the question
   textSize(45);
   fill(255, 100, 0);
@@ -67,24 +69,4 @@ void draw() {
   noCursor();
   fill(255, 255, 255);
   ellipse(mouseX, mouseY, 10, 10);
-
-  //hit detection of the mouse 
-  float leg1 = pow(mouseX - x1, 125);
-  float leg2 = pow(mouseY - y1, 125);
-  distance = sqrt(leg1 + leg2);
-  leg1 = pow(mouseX - x2, 125);
-  leg2 = pow(mouseY - y2, 125);
-  distance = sqrt(leg1 + leg2);
-  leg1 = pow(mouseX - x3, 125);
-  leg2 = pow(mouseY - y3, 125);
-  distance = sqrt(leg1 + leg2);
-  leg1 = pow(mouseX - x4, 125);
-  leg2 = pow(mouseY - y4, 125);
-  distance = sqrt(leg1 + leg2);
-  leg1 = pow(mouseX - x5, 125);
-  leg2 = pow(mouseY - y5, 125);
-  distance = sqrt(leg1 + leg2);
-  leg1 = pow(mouseX - x6, 125);
-  leg2 = pow(mouseY - y6, 125);
-  distance = sqrt(leg1 + leg2);
 }
